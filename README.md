@@ -14,11 +14,14 @@ Dự án monorepo gồm **frontend Vite/React** (`client/`) và **backend Expres
 
 ## Cấu trúc thư mục
 
-| Thư mục | Mô tả |
-|---------|--------|
-| `client/` | Giao diện React, Tailwind, React Router |
-| `server/` | REST API Express, JWT cookie, Zod, MySQL |
-| `server/sql/` | `init.sql` tạo DB/bảng + seed |
+
+| Thư mục       | Mô tả                                    |
+| ------------- | ---------------------------------------- |
+| `client/`     | Giao diện React, Tailwind, React Router  |
+| `server/`     | REST API Express, JWT cookie, Zod, MySQL |
+| `server/sql/` | `init.sql` tạo DB/bảng + seed            |
+
+
 ---
 
 ## Cài đặt
@@ -46,7 +49,7 @@ Sao chép `server/.env.example` thành `server/.env` và chỉnh cho đúng máy
 
 - Tạo OAuth 2.0 Client (Web) trên Google Cloud Console.
 - Authorized redirect URI khớp `GOOGLE_REDIRECT_URI`, ví dụ:  
-  `http://localhost:4000/api/auth/google/callback`
+`http://localhost:4000/api/auth/google/callback`
 - Điền vào `server/.env`:
 
 ```env
@@ -60,11 +63,13 @@ Nếu chưa cấu hình Google, nút đăng nhập Google sẽ báo lỗi cấu 
 
 ### 4. Tài khoản mẫu sau khi chạy `init.sql`
 
-| Email | Vai trò | Mật khẩu |
-|--------|---------|-----------|
-| `admin@stride.test` | admin | `Test123` |
+
+| Email               | Vai trò  | Mật khẩu  |
+| ------------------- | -------- | --------- |
+| `admin@stride.test` | admin    | `Test123` |
 | `user1@stride.test` | customer | `Test123` |
 | `user2@stride.test` | customer | `Test123` |
+
 
 Thêm admin khác: tự `INSERT` vào `users` với `role = 'admin'` và `password_hash` bcrypt, hoặc đổi `role` một user có sẵn trong phpMyAdmin.
 
@@ -110,3 +115,4 @@ Ví dụ: `GET /api/products`, `GET /api/products/:slug`, `POST /api/orders`, `G
 Chi tiết route nằm trong `server/src/routes/`.
 
 ---
+
