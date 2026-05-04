@@ -1,0 +1,37 @@
+# ===== General =====
+*.log
+logs/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+*.sw?
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# VS Code (keep workspace recommendations)
+.vscode/*
+!.vscode/extensions.json
+
+# ===== Node / Vite / React =====
+node_modules/
+dist/
+dist-ssr/
+*.local
+.eslintcache
+
+# Vite cache
+**/node_modules/.vite/
+
+# ===== Env / secrets =====
+.env
+.env.*
+!.env.example
+
+# ===== Test / coverage =====
+coverage/
+

@@ -1,0 +1,31 @@
+import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { AccountPage } from './pages/account/AccountPage'
+import { AdminPage } from './pages/admin/AdminPage'
+import { CartPage } from './pages/cart/CartPage'
+import { CheckoutPage } from './pages/checkout/CheckoutPage'
+import { HomePage } from './pages/home/HomePage'
+import { LoginPage } from './pages/login/LoginPage'
+import { RegisterPage } from './pages/register/RegisterPage'
+import { ProductDetailPage } from './pages/product/ProductDetailPage'
+import { ProductsPage } from './pages/products/ProductsPage'
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/products/:slug" element={<ProductDetailPage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/account" element={<AccountPage />} />
+        <Route path="/admin" element={<AdminPage />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default App
